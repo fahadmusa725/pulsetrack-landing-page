@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseTrack — Team Productivity & Real-Time Velocity Analytics</title>
+  <meta name="description" content="See your team's momentum, not just their tasks. Real-time productivity telemetry, focus tracking, project velocity, and intelligent workload balancing for high-output teams.">
+  <meta name="keywords" content="team productivity, velocity analytics, focus time tracker, agile telemetry, workload balance, developer analytics">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PulseTrack — Team Productivity & Real-Time Velocity Analytics">
+  <meta property="og:description" content="See your team's momentum, not just their tasks. Real-time productivity, focus time, and workload balance.">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322D3EE' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M22 12h-4l-3 9L9 3l-3 9H2'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-primary text-slate">
+
+  <!-- Background Ambient Glow & Grid Grid Patterns -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header id="navbar" class="header-nav">
+    <div class="nav-container container">
+      <a href="#" class="brand-logo" aria-label="PulseTrack Home">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </span>
+        <span class="logo-text">Pulse<span class="gradient-text">Track</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#product" class="nav-link">Product</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#testimonials" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#login" class="nav-link-subtle" id="nav-signin-btn">Sign In</a>
+        <a href="#pricing" class="btn btn-sm btn-gradient shadow-glow">Get Started</a>
+        <button id="mobile-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-content">
+        <ul class="mobile-links">
+          <li><a href="#product" class="mobile-nav-link">Product</a></li>
+          <li><a href="#features" class="mobile-nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="mobile-nav-link">How It Works</a></li>
+          <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
+          <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+        </ul>
+        <div class="mobile-actions">
+          <a href="#login" class="btn btn-secondary w-full">Sign In</a>
+          <a href="#pricing" class="btn btn-gradient w-full">Get Started Free</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- Top Pill Badge -->
+        <div class="badge-wrapper reveal-fade">
+          <a href="#features" class="hero-badge">
+            <span class="badge-tag">NEW v2.4</span>
+            <span class="badge-text">AI-powered velocity forecasting is live</span>
+            <svg class="badge-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 12l4-4-4-4"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Headline & Subheadline -->
+        <h1 class="hero-title reveal-fade">
+          See your team's momentum,<br>
+          <span class="gradient-text">not just their tasks.</span>
+        </h1>
+        
+        <p class="hero-subtitle reveal-fade">
+          PulseTrack delivers continuous engineering telemetry, deep focus analysis, and automated workload balancing—giving leaders true velocity without micromanagement.
+        </p>
+
+        <!-- CTA Action Group -->
+        <div class="hero-actions reveal-fade">
+          <a href="#pricing" class="btn btn-lg btn-gradient shadow-glow">
+            <span>Start 14-Day Free Trial</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="btn-icon">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <button id="hero-demo-trigger" class="btn btn-lg btn-secondary">
+            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>Watch 2-Min Demo</span>
+          </button>
+        </div>
+
+        <div class="hero-subtext reveal-fade">
+          <span>⚡ No credit card required</span>
+          <span class="bullet">•</span>
+          <span>🔒 SOC2 Type II Certified</span>
+          <span class="bullet">•</span>
+          <span>⏱️ 5-minute Slack & GitHub sync</span>
+        </div>
+
+        <!-- ================= MOCK DASHBOARD UI PREVIEW ================= -->
+        <div class="dashboard-wrapper reveal-fade" id="product">
+          <div class="dashboard-window glass-panel">
+            
+            <!-- Window Titlebar -->
+            <div class="window-bar">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="window-search-bar">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>pulsetrack.app/org/core-engineering/velocity</span>
+              </div>
+              <div class="window-actions">
+                <span class="live-indicator"><span class="pulse-ring"></span>LIVE TELEMETRY</span>
+              </div>
+            </div>
+
+            <!-- Dashboard Internal Layout -->
+            <div class="dashboard-body">
+              
+              <!-- Left Sidebar Mini -->
+              <aside class="dash-sidebar">
+                <div class="dash-nav-item active">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                  <span>Overview</span>
+                </div>
+                <div class="dash-nav-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  <span>Momentum</span>
+                </div>
+                <div class="dash-nav-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Deep Work</span>
+                </div>
+                <div class="dash-nav-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span>Team Load</span>
+                </div>
+                <div class="dash-user-badge">
+                  <div class="avatar-small">JD</div>
+                  <div class="avatar-info">
+                    <span class="uname">Jordan Vance</span>
+                    <span class="urole">VP Engineering</span>
+                  </div>
+                </div>
+              </aside>
+
+              <!-- Main Dashboard Core Area -->
+              <div class="dash-main">
+                
+                <!-- Quick KPI Stats Row -->
+                <div class="dash-metrics-grid">
+                  <div class="metric-card">
+                    <div class="metric-header">
+                      <span class="metric-label">Team Velocity Score</span>
+                      <span class="metric-trend trend-up">+14.2%</span>
+                    </div>
+                    <div class="metric-value">94.8<span class="unit">/100</span></div>
+                    <div class="metric-progress-track">
+                      <div class="metric-progress-fill" style="width: 94.8%;"></div>
+                    </div>
+                    <span class="metric-sub">Sprint 42 • Peak Efficiency</span>
+                  </div>
+
+                  <div class="metric-card">
+                    <div class="metric-header">
+                      <span class="metric-label">Deep Focus Ratio</span>
+                      <span class="metric-trend trend-up">+6.4 hrs</span>
+                    </div>
+                    <div class="metric-value">32.4<span class="unit">h/wk</span></div>
+                    <div class="metric-progress-track">
+                      <div class="metric-progress-fill fill-cyan" style="width: 78%;"></div>
+                    </div>
+                    <span class="metric-sub">78% uninterrupted coding time</span>
+                  </div>
+
+                  <div class="metric-card">
+                    <div class="metric-header">
+                      <span class="metric-label">Burnout Risk Index</span>
+                      <span class="metric-trend trend-optimal">Optimal</span>
+                    </div>
+                    <div class="metric-value">Low<span class="unit"> (4.2%)</span></div>
+                    <div class="metric-progress-track">
+                      <div class="metric-progress-fill fill-green" style="width: 15%;"></div>
+                    </div>
+                    <span class="metric-sub">Balanced distribution across 18 devs</span>
+                  </div>
+                </div>
+
+                <!-- Main Interactive Chart & Feed Section -->
+                <div class="dash-split-grid">
+                  
+                  <!-- Sprint Velocity & Cycle Time Chart -->
+                  <div class="dash-chart-card">
+                    <div class="chart-card-header">
+                      <div>
+                        <h4 class="chart-title">Cycle Time vs. Focus Blocks</h4>
+                        <p class="chart-sub">Real-time throughput aggregated from GitHub PRs and Jira issues</p>
+                      </div>
+                      <div class="chart-legend">
+                        <span class="legend-item"><span class="legend-dot dot-cyan"></span>Focus Hours</span>
+                        <span class="legend-item"><span class="legend-dot dot-indigo"></span>Shipped PRs</span>
+                      </div>
+                    </div>
+
+                    <!-- CSS / SVG Interactive Wave Chart Visual -->
+                    <div class="chart-canvas-mock">
+                      <div class="chart-bars-container">
+                        <div class="bar-col" data-day="Mon">
+                          <div class="bar-fill-track"><div class="bar-fill-cyan" style="height: 65%;"></div></div>
+                          <span class="col-lbl">Mon</span>
+                        </div>
+                        <div class="bar-col" data-day="Tue">
+                          <div class="bar-fill-track"><div class="bar-fill-cyan" style="height: 82%;"></div></div>
+                          <span class="col-lbl">Tue</span>
+                        </div>
+                        <div class="bar-col" data-day="Wed">
+                          <div class="bar-fill-track"><div class="bar-fill-cyan" style="height: 94%;"></div></div>
+                          <span class="col-lbl">Wed</span>
+                        </div>
+                        <div class="bar-col" data-day="Thu">
+                          <div class="bar-fill-track"><div class="bar-fill-cyan" style="height: 78%;"></div></div>
+                          <span class="col-lbl">Thu</span>
+                        </div>
+                        <div class="bar-col" data-day="Fri">
+                          <div class="bar-fill-track"><div class="bar-fill-cyan" style="height: 88%;"></div></div>
+                          <span class="col-lbl">Fri</span>
+                        </div>
+                        <div class="bar-col" data-day="Sat">
+                          <div class="bar-fill-track"><div class="bar-fill-cyan" style="height: 24%;"></div></div>
+                          <span class="col-lbl">Sat</span>
+                        </div>
+                        <div class="bar-col" data-day="Sun">
+                          <div class="bar-fill-track"><div class="bar-fill-cyan" style="height: 12%;"></div></div>
+                          <span class="col-lbl">Sun</span>
+                        </div>
+                      </div>
+
+                      <!-- Overlay Vector Momentum Line -->
+                      <svg class="chart-svg-line" viewBox="0 0 500 120" preserveAspectRatio="none">
+                        <defs>
+                          <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#22D3EE" />
+                            <stop offset="50%" stop-color="#3B82F6" />
+                            <stop offset="100%" stop-color="#818CF8" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M0,90 Q 75,30 150,50 T 300,20 T 420,35 T 500,10" fill="none" stroke="url(#lineGlow)" stroke-width="3.5" stroke-linecap="round"/>
+                        <!-- Highlight dots -->
+                        <circle cx="150" cy="50" r="4.5" fill="#22D3EE" class="chart-node"/>
+                        <circle cx="300" cy="20" r="5" fill="#3B82F6" class="chart-node"/>
+                        <circle cx="500" cy="10" r="5.5" fill="#818CF8" class="chart-node"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Right Telemetry Activity & Squad Distribution -->
+                  <div class="dash-activity-card">
+                    <h4 class="activity-title">Live Squad Stream</h4>
+                    
+                    <div class="stream-list">
+                      <div class="stream-item">
+                        <div class="stream-avatar bg-indigo">AK</div>
+                        <div class="stream-details">
+                          <div class="stream-top">
+                            <span class="dev-name">Alex Kim</span>
+                            <span class="stream-time">2m ago</span>
+                          </div>
+                          <p class="stream-desc">Merged PR #418 <span class="tag-accent">Kafka Pipeline</span></p>
+                          <div class="stream-badge-row">
+                            <span class="pill-chip pill-cyan">🚀 4.2h Focus Streak</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="stream-item">
+                        <div class="stream-avatar bg-teal">SL</div>
+                        <div class="stream-details">
+                          <div class="stream-top">
+                            <span class="dev-name">Sarah Lin</span>
+                            <span class="stream-time">14m ago</span>
+                          </div>
+                          <p class="stream-desc">Completed review on <span class="tag-accent">Auth Engine v2</span></p>
+                          <div class="stream-badge-row">
+                            <span class="pill-chip pill-green">⚡ Zero Blockers</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="stream-item">
+                        <div class="stream-avatar bg-blue">MR</div>
+                        <div class="stream-details">
+                          <div class="stream-top">
+                            <span class="dev-name">Marcus Reed</span>
+                            <span class="stream-time">28m ago</span>
+                          </div>
+                          <p class="stream-desc">AI workload balance auto-adjusted</p>
+                          <div class="stream-badge-row">
+                            <span class="pill-chip pill-purple">🛡️ Workload Guard</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Floating Badges / Decorative HUD Elements -->
+          <div class="floating-hud hud-left glass-card animate-float-slow">
+            <div class="hud-icon glow-teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <div class="hud-label">Sprint Velocity</div>
+              <div class="hud-value">+38% vs. Last Month</div>
+            </div>
+          </div>
+
+          <div class="floating-hud hud-right glass-card animate-float-delay">
+            <div class="hud-icon glow-indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <div>
+              <div class="hud-label">Burnout Prevention</div>
+              <div class="hud-value">100% Team Protected</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================= TRUSTED BY LOGO STRIP ================= -->
+        <div class="trust-strip reveal-fade">
+          <p class="trust-title">TRUSTED BY HIGH-PERFORMANCE PRODUCT & ENGINEERING TEAMS AT</p>
+          <div class="trust-logos">
+            <div class="trust-item"><span class="company-symbol">▲</span> NEXUSTECH</div>
+            <div class="trust-item"><span class="company-symbol">❖</span> HYPERFLOW</div>
+            <div class="trust-item"><span class="company-symbol">⬢</span> CYBERSTACK</div>
+            <div class="trust-item"><span class="company-symbol">✦</span> LUMENLABS</div>
+            <div class="trust-item"><span class="company-symbol">◉</span> SYNAPSE.IO</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= STATS STRIP ================= -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid glass-panel reveal-fade">
+          
+          <div class="stat-item">
+            <div class="stat-number" data-target="10000" data-suffix="+">10,000+</div>
+            <div class="stat-label">Active Engineering Teams</div>
+            <div class="stat-sub">Across 48 countries</div>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="42" data-suffix="%">42%</div>
+            <div class="stat-label">Productivity Gain</div>
+            <div class="stat-sub">Measured via PR throughput</div>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="3" data-prefix="<" data-suffix=" hrs"> &lt;3 hrs</div>
+            <div class="stat-label">PR Review Turnaround</div>
+            <div class="stat-sub">Down from 18.4 hrs average</div>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="99.99" data-suffix="%">99.99%</div>
+            <div class="stat-label">Platform Uptime</div>
+            <div class="stat-sub">Enterprise SLA guaranteed</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES GRID ================= -->
+    <section id="features" class="features-section">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-fade">
+          <div class="section-pill">SYSTEM CAPABILITIES</div>
+          <h2 class="section-title">Engineered to eliminate friction, <span class="gradient-text">amplify output.</span></h2>
+          <p class="section-subtitle">
+            PulseTrack synthesizes noisy workspace data from Git, Jira, Slack, and calendars into crystal-clear actionable momentum signals.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- Feature 1 -->
+          <div class="feature-card glass-card reveal-fade">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"></path>
+                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Real-Time Velocity Analytics</h3>
+            <p class="feature-desc">Continuous telemetry on sprint velocity, merge cadence, and cycle bottlenecks updated in sub-second intervals.</p>
+            <div class="feature-highlight">
+              <span class="highlight-bullet"></span> Live PR cycle breakdown
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card glass-card reveal-fade">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Workload Balance & Burnout Guard</h3>
+            <p class="feature-desc">AI monitors cognitive load and context switching, re-routing ticket assignments before developers hit exhaustion.</p>
+            <div class="feature-highlight">
+              <span class="highlight-bullet"></span> Proactive threshold triggers
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card glass-card reveal-fade">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Deep Work & Focus Protection</h3>
+            <p class="feature-desc">Automatically schedules meeting-free focus blocks and pauses non-critical Slack notifications during coding streaks.</p>
+            <div class="feature-highlight">
+              <span class="highlight-bullet"></span> Smart calendar defragmentation
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-card glass-card reveal-fade">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Instant Integrations Hub</h3>
+            <p class="feature-desc">Seamless one-click connectors for GitHub, GitLab, Linear, Jira, Slack, Figma, and Google Calendar without agent installs.</p>
+            <div class="feature-highlight">
+              <span class="highlight-bullet"></span> 40+ pre-built native connectors
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="feature-card glass-card reveal-fade">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Automated Executive Digest</h3>
+            <p class="feature-desc">Generate board-ready sprint retrospectives and engineering health summaries in natural language with one tap.</p>
+            <div class="feature-highlight">
+              <span class="highlight-bullet"></span> Zero manual status slides
+            </div>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="feature-card glass-card reveal-fade">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Privacy-First Architecture</h3>
+            <p class="feature-desc">No keystroke recording or invasive surveillance. PulseTrack only computes macro-level team flow signals and git metadata.</p>
+            <div class="feature-highlight">
+              <span class="highlight-bullet"></span> Zero employee spy metrics
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section id="how-it-works" class="workflow-section">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-fade">
+          <div class="section-pill">SEAMLESS ONBOARDING</div>
+          <h2 class="section-title">Up and running in <span class="gradient-text">three effortless steps</span></h2>
+          <p class="section-subtitle">
+            Zero complex server agents or config scripts. Hook into your existing developer ecosystem in less than five minutes.
+          </p>
+        </div>
+
+        <div class="workflow-steps reveal-fade">
+          
+          <div class="workflow-card glass-card">
+            <div class="step-badge">01</div>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </div>
+            <h3 class="step-title">Connect Tooling</h3>
+            <p class="step-desc">Authorize your GitHub org, issue trackers, and Slack workspace with enterprise-grade OAuth in 60 seconds.</p>
+          </div>
+
+          <div class="step-connector" aria-hidden="true">
+            <svg viewBox="0 0 80 24" fill="none">
+              <path d="M0 12h70m0 0l-8-6m8 6l-8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="workflow-card glass-card">
+            <div class="step-badge">02</div>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 12l-4-4-4 4M12 16V8"></path></svg>
+            </div>
+            <h3 class="step-title">Synthesize Signals</h3>
+            <p class="step-desc">PulseTrack's engine maps commit patterns, cycle bottlenecks, and distraction vectors without invading dev privacy.</p>
+          </div>
+
+          <div class="step-connector" aria-hidden="true">
+            <svg viewBox="0 0 80 24" fill="none">
+              <path d="M0 12h70m0 0l-8-6m8 6l-8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="workflow-card glass-card">
+            <div class="step-badge">03</div>
+            <div class="step-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="step-title">Optimize & Accelerate</h3>
+            <p class="step-desc">Receive real-time velocity recommendations, eliminate blocking dependencies, and celebrate sustainable team flow.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIAL ================= -->
+    <section id="testimonials" class="testimonial-section">
+      <div class="container">
+        
+        <div class="testimonial-wrapper glass-panel reveal-fade">
+          <div class="quote-icon" aria-hidden="true">“</div>
+          
+          <div class="testimonial-content">
+            <div class="rating-stars" aria-label="5 out of 5 stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "PulseTrack completely transformed how our engineering squads work. We went from guessing why sprint delivery slowed down to instantly spotting blockers and protecting our engineers' deep focus time. Our team throughput climbed 38% in the first month alone."
+            </blockquote>
+            
+            <div class="testimonial-author">
+              <div class="avatar-quote">
+                <span class="avatar-initials">ES</span>
+                <span class="avatar-status-dot"></span>
+              </div>
+              <div class="author-details">
+                <div class="author-name">Elena Rostova</div>
+                <div class="author-role">Chief Technology Officer at <span class="highlight-company">Vanguard Dynamics</span></div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PRICING SECTION ================= -->
+    <section id="pricing" class="pricing-section">
+      <div class="container">
+        
+        <div class="section-header text-center reveal-fade">
+          <div class="section-pill">TRANSPARENT PRICING</div>
+          <h2 class="section-title">Invest in momentum, <span class="gradient-text">scale at your pace</span></h2>
+          <p class="section-subtitle">No hidden fees. Every plan includes a 14-day full feature trial.</p>
+          
+          <!-- Billing Switcher Toggle -->
+          <div class="billing-toggle-container">
+            <span class="billing-label" id="monthly-label">Monthly</span>
+            <button id="billing-switch" class="toggle-switch" role="switch" aria-checked="false" aria-label="Toggle annual billing">
+              <span class="switch-ball"></span>
+            </button>
+            <span class="billing-label active" id="annual-label">
+              Annually <span class="discount-pill">Save 20%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Tier 1: Starter -->
+          <div class="pricing-card glass-card reveal-fade">
+            <div class="pricing-header">
+              <h3 class="tier-name">Growth Squad</h3>
+              <p class="tier-desc">Ideal for agile startups and fast-moving small engineering teams.</p>
+              <div class="tier-price">
+                <span class="currency">$</span>
+                <span class="amount" data-monthly="29" data-annual="24">24</span>
+                <span class="period">/ seat / mo</span>
+              </div>
+            </div>
+            
+            <ul class="tier-features">
+              <li><span class="check-icon">✓</span> Up to 15 team members</li>
+              <li><span class="check-icon">✓</span> GitHub & Jira full telemetry</li>
+              <li><span class="check-icon">✓</span> 30-day historical analytics</li>
+              <li><span class="check-icon">✓</span> Focus streak detection</li>
+              <li><span class="check-icon">✓</span> Standard Slack alerts</li>
+            </ul>
+
+            <a href="#signup" class="btn btn-secondary w-full">Start 14-Day Trial</a>
+          </div>
+
+          <!-- Tier 2: Pro (Featured / Most Popular) -->
+          <div class="pricing-card glass-card pricing-featured reveal-fade">
+            <div class="popular-badge">MOST POPULAR</div>
+            <div class="pricing-header">
+              <h3 class="tier-name">Scale & Enterprise</h3>
+              <p class="tier-desc">For multi-squad organizations demanding deep predictive velocity AI.</p>
+              <div class="tier-price">
+                <span class="currency">$</span>
+                <span class="amount" data-monthly="59" data-annual="49">49</span>
+                <span class="period">/ seat / mo</span>
+              </div>
+            </div>
+
+            <ul class="tier-features">
+              <li><span class="check-icon">✓</span> Unlimited team members</li>
+              <li><span class="check-icon">✓</span> AI Workload Rebalancing Engine</li>
+              <li><span class="check-icon">✓</span> Unlimited historical velocity data</li>
+              <li><span class="check-icon">✓</span> Smart Focus Shield for Slack & Calendar</li>
+              <li><span class="check-icon">✓</span> Custom executive export digests</li>
+              <li><span class="check-icon">✓</span> Dedicated engineering success lead</li>
+            </ul>
+
+            <a href="#signup" class="btn btn-gradient shadow-glow w-full">Start 14-Day Trial</a>
+          </div>
+
+          <!-- Tier 3: Enterprise Custom -->
+          <div class="pricing-card glass-card reveal-fade">
+            <div class="pricing-header">
+              <h3 class="tier-name">Custom Platform</h3>
+              <p class="tier-desc">Full governance, bespoke on-prem/VPC hosting, and tailored SLAs.</p>
+              <div class="tier-price">
+                <span class="amount-custom">Custom</span>
+                <span class="period">contact sales</span>
+              </div>
+            </div>
+
+            <ul class="tier-features">
+              <li><span class="check-icon">✓</span> Dedicated VPC / Self-hosted options</li>
+              <li><span class="check-icon">✓</span> Custom data retention policies</li>
+              <li><span class="check-icon">✓</span> Custom integrations & REST webhooks</li>
+              <li><span class="check-icon">✓</span> 99.99% uptime SLA with financial backing</li>
+              <li><span class="check-icon">✓</span> SAML SSO & Okta provisioning</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-secondary w-full">Talk to Solutions Team</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA BANNER ================= -->
+    <section class="final-cta-section">
+      <div class="container">
+        
+        <div class="cta-banner glass-panel reveal-fade">
+          <div class="cta-glow-mesh" aria-hidden="true"></div>
+          
+          <div class="cta-content text-center">
+            <h2 class="cta-title">Ready to see your team's <span class="gradient-text">real momentum?</span></h2>
+            <p class="cta-desc">
+              Join thousands of engineering leaders who build faster, stress less, and deliver predictable sprints with PulseTrack.
+            </p>
+            
+            <div class="cta-buttons">
+              <a href="#pricing" class="btn btn-lg btn-gradient shadow-glow">Start Free Trial Now</a>
+              <a href="#demo" class="btn btn-lg btn-secondary">Schedule Personalized Demo</a>
+            </div>
+
+            <div class="cta-guarantees">
+              <span>✓ Instant setup</span>
+              <span>✓ Cancel anytime</span>
+              <span>✓ Enterprise security</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-section">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand column -->
+        <div class="footer-brand-col">
+          <a href="#" class="brand-logo" aria-label="PulseTrack Home">
+            <span class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </span>
+            <span class="logo-text">Pulse<span class="gradient-text">Track</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            The next-generation engineering telemetry platform designed for high-velocity teams who value flow over busywork.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="social-btn" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Discord">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Product -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#product">Live Telemetry</a></li>
+            <li><a href="#features">Focus Shield</a></li>
+            <li><a href="#features">Workload AI</a></li>
+            <li><a href="#how-it-works">Integrations</a></li>
+            <li><a href="#pricing">Pricing & Plans</a></li>
+            <li><a href="#">Changelog <span class="footer-tag">v2.4</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Engineering Blog</a></li>
+            <li><a href="#">Careers <span class="footer-tag tag-hiring">We're hiring</span></a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Brand Kit</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Resources & Legal -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Security & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Security Overview</a></li>
+            <li><a href="#">SOC2 Type II Report</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Subprocessors</a></li>
+            <li><a href="#">System Status</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 PulseTrack, Inc. Built for Auspify Internship Evaluation. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <span class="system-status-pill">
+            <span class="status-dot"></span> All Systems Operational
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= DEMO MODAL POPUP ================= -->
+  <div id="demo-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-box glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag">INTERACTIVE PREVIEW</span>
+          <h3 class="modal-title">PulseTrack Guided Walkthrough</h3>
+        </div>
+        <button id="modal-close-btn" class="modal-close" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-video-placeholder">
+        <div class="demo-screen">
+          <div class="demo-pulse-core">
+            <div class="pulse-wave wave-1"></div>
+            <div class="pulse-wave wave-2"></div>
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#22D3EE" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <div class="demo-caption">
+            <h4>Real-time Telemetry Engine Initialized</h4>
+            <p>Aggregating 1,420 PR activities • Detecting focus patterns across 3 squads</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <p class="modal-footnote">Experience the full power in your own workspace with zero friction.</p>
+        <a href="#pricing" class="btn btn-gradient" id="modal-start-btn">Start Free 14-Day Trial</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
