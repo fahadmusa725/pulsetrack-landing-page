@@ -5,7 +5,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Sticky Navbar Dynamic Blur & Opacity on Scroll
   const navbar = document.getElementById('navbar');
   const handleScroll = () => {
     if (window.scrollY > 20) {
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // 2. Mobile Menu Toggle Drawer
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-actions a');
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Scroll Reveal Animation via Intersection Observer
   const revealElements = document.querySelectorAll('.reveal-fade');
   if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -69,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('visible'));
   }
 
-  // 4. Interactive Pricing Toggle (Monthly vs Annual)
   const billingSwitch = document.getElementById('billing-switch');
   const monthlyLabel = document.getElementById('monthly-label');
   const annualLabel = document.getElementById('annual-label');
@@ -108,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Interactive Demo Modal
   const demoTrigger = document.getElementById('hero-demo-trigger');
   const demoModal = document.getElementById('demo-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -152,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 6. Interactive Dashboard Simulation (Dynamic Bar Chart Hover & Pulse)
   const chartBars = document.querySelectorAll('.bar-col');
   chartBars.forEach(col => {
     col.addEventListener('mouseenter', () => {
@@ -165,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Interactive Dashboard Sidebar items active state switch
   const dashNavItems = document.querySelectorAll('.dash-nav-item');
   dashNavItems.forEach(item => {
     item.addEventListener('click', () => {
