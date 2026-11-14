@@ -21,14 +21,18 @@ A dark-themed, glassmorphic SaaS landing page built for **PulseTrack**, a fictio
 
 ## Screenshots
 
-### Desktop
-![Desktop View](screenshots/desktop-hero.png)
-
-### Key Feature
-![Feature](screenshots/feature.png)
-
-### Mobile
-![Mobile View](screenshots/mobile-view.png)
+<table>
+  <tr>
+    <th align="center">Desktop</th>
+    <th align="center">Pricing</th>
+    <th align="center">Mobile</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/desktop-hero.png" width="360" alt="PROJECT desktop view"></td>
+    <td><img src="screenshots/feature.png" width="360" alt="PROJECT FEATURE_TITLE"></td>
+    <td><img src="screenshots/mobile-view.png" width="165" alt="PROJECT mobile view"></td>
+  </tr>
+</table>
 
 ## Design System
 
